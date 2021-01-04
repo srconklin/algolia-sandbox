@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/modern-normalize@1,npm/instantsearch.css@7/themes/algolia-min.min.css">
+  <link rel="stylesheet" href="./src/app.css">
+
+  <title>ais-ecommerce-demo-app</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header" x-data="{showMenu : false}">
+    <div class="container header-container">
+      <!-- 2 column  wrapper -->
+      <div class="header-column">
+
+        <!-- logo -->
+        <div class="header-logo">
+          <img alt="Capovani Brothers" class="block" src="images/logo.png">
+        </div>
+
+        <!-- menu icon -->
+        <div class="header-nav">
+
+          <button type="button" @click.prevent="showMenu = !showMenu ">
+
+            <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" class="fill-current" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" x-show="!showMenu">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="close-vm" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x-show="showMenu">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="15" y1="9" x2="9" y2="15"></line>
+              <line x1="9" y1="9" x2="15" y2="15"></line>
+            </svg>
+
+          </button>
+        </div>
+      </div>
+
+      <!-- links menu -->
+      <div :class="{ 'hidden': !showMenu }" class="header-links">
+        <a href="#">
+          About
+        </a>
+        <a href="#">
+          Contact
+        </a>
+        <a href="#">
+          Log In
+        </a>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="main">
+
+    <div class="left-panel">
+
+      <!-- <div id="clear-refinements"></div> -->
+      <div id="categories"></div>
+      <div id="mfr"></div>
+
+    </div>
+
+    <div class="search-panel">
+      <div class="search-panel__results">
+        <div id="searchbox"></div>
+        <!-- <div id="sort-by"></div> -->
+        <div id="stats"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+
+    </div>
+
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <ul class="footer-links">
+        <li><a href="/disclaimer">Disclaimer</a></li>
+        <li><a href="/cookie">Cookie policy</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+      </ul>
+    </div>
+
+  </footer>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>  -->
+
+   <script src="https://cdn.jsdelivr.net/combine/npm/algoliasearch@4,npm/instantsearch.js@4,npm/alpinejs@2"></script> 
+  <script src="./src/app.js"></script>
+</body>
+
+</html>

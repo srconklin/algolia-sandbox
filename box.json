@@ -1,0 +1,8 @@
+{
+    "dependencies":{
+        "algoliacfc":"^2.0.1"
+    },
+    "installPaths":{
+        "algoliacfc":"modules/algoliacfc/"
+    }
+}
